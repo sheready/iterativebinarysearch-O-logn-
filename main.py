@@ -5,22 +5,22 @@ def iterativebinarysearch(arr, lowervalue, highervalue, searchvalue):
   while lowervalue <= highervalue:
     mid = lowervalue + (highervalue - lowervalue) // 2
 
-#check if x is present at mid
+#check if search value is present at mid
     if arr[mid] == searchvalue:
       return mid
 
-#If x is greater, ignore left half
+#If search value is greater, ignore left half
     elif arr[mid] < searchvalue:
       lowervalue = mid + 1
-#if x is smaller,ignore right half
+#if search value is smaller,ignore right half
     else:
       highervalue = mid - 1
   #if its not present
-    return -1
+  return -1
 
 #declare array
 start = time.time()
-arr = [56,90,78,49,211,67,30]
+arr = [30,49,56,67,78,211]
 searchvalue = 78
 
 results = iterativebinarysearch(arr, 0, len(arr)-1, searchvalue)
